@@ -1,0 +1,15 @@
+{
+  "root": true,
+  "extends": ["eslint:recommended", "plugin:react/recommended", "standard", "prettier"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "commonjs": true,
+    "amd": true,
+    "jest": true
+  },
+  "overrides": [],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  }
+}
