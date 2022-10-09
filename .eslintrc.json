@@ -10,6 +10,7 @@
   },
   "overrides": [],
   "rules": {
+    "react/jsx-sort-props": "warn",
     "react/react-in-jsx-scope": "off"
   }
 }
