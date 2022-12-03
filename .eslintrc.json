@@ -10,6 +10,8 @@
   },
   "overrides": [],
   "rules": {
+    "no-unused-vars": "off",
+    "react/prop-types": "off",
     "react/jsx-sort-props": "warn",
     "react/react-in-jsx-scope": "off"
   }
