@@ -2,6 +2,7 @@ import { faGithubSquare, faGitlabSquare, faLinkedin } from '@fortawesome/free-br
 import { faChevronDown, faEnvelope, faSeedling } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import Draggable, { DraggableCore } from 'react-draggable'
 import { FadeIn } from 'react-slide-fade-in'
 import Profile from '../../src/assets/profile.png'
 
@@ -20,6 +21,20 @@ function Alert({ content }) {
         <span>{content}</span>
       </div>
     </div>
+  )
+}
+
+function AvatarIcon() {
+  return (
+    <Draggable>
+      <div className="relative z-10">
+        <div className="items-center justify-center avatar">
+          <div className="w-64 h-64 mt-4 rounded-full">
+            <img draggable="false" src={Profile} />
+          </div>
+        </div>
+      </div>
+    </Draggable>
   )
 }
 
@@ -71,11 +86,7 @@ function Portfolio() {
         <div className="flex flex-col items-center h-screen md:h-fit">
           <div className="flex flex-col pt-4 mt-14 gap-y-10 md:flex-row md:gap-x-36">
             <FadeIn durationInMilliseconds={750} from="left" positionOffset={100} triggerOffset={50}>
-              <div className="items-center justify-center avatar">
-                <div className="w-64 h-64 mt-4 rounded-full">
-                  <img src={Profile} />
-                </div>
-              </div>
+              <AvatarIcon img={Profile} />
             </FadeIn>
             <FadeIn
               delayInMilliseconds={250}
@@ -120,7 +131,7 @@ function Portfolio() {
           positionOffset={50}
           triggerOffset={50}
         >
-          <div className="h-screen pt-4 space-y-16">
+          <div className="pt-4 pb-10 space-y-16 md:pb-0">
             <div className="flex flex-col mx-2 text-left" id="intro">
               <Title content="自介" />
               <p className="px-2 text-lg text-gray-300">

@@ -24,6 +24,7 @@
     "daisyui": "^2.31.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.5",
     "react-scripts": "5.0.1",
     "react-slide-fade-in": "^1.0.9",
     "web-vitals": "^2.1.4"
